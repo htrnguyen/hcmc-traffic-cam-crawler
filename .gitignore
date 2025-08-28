@@ -1,0 +1,140 @@
+# ========================
+# Environment và config nhạy cảm
+# ========================
+.env
+.env.local
+.env.production
+.env.staging
+config.json
+rclone.conf
+*.key
+*.pem
+*.p12
+
+# ========================
+# Dữ liệu và output
+# ========================
+FolderAjax_Response.json
+staging_images/
+logs/
+*.log
+tmp/
+temp/
+
+# ========================
+# Project datasets 
+# ========================
+camera_catalog/camera_catalog_imagehandler.json
+camera_catalog_chunks/*.json
+!camera_catalog_chunks/index.json
+
+# ========================
+# Database và SQL
+# ========================
+sqlite_dataset/
+*.sql
+*.sqlite
+*.db
+
+# ========================
+# Rclone binary 
+# ========================
+rclone-v1.71.0-windows-amd64/
+.rclone/
+rclone-cache/
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+*.pyo
+*.pyd
+*.pyc
+build/
+dist/
+downloads/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+develop-eggs/
+.installed.cfg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# ========================
+# IDE / Editors
+# ========================
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================
+# OS generated files
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========================
+# Backup và test files
+# ========================
+*.bak
+*.backup
+*.old
+*.orig
+*.test
+test_output/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ========================
+# Local config overrides
+# ========================
+local_config.*
+local_settings.*
+*.swp
+*.swo
+*~
+
+# ========================
+# OS specific
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================
+# Logs & temp files
+# ========================
+logs/
+*.log
+*.tmp
+*.temp
