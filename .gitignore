@@ -22,11 +22,10 @@ tmp/
 temp/
 
 # ========================
-# Project datasets 
+# Project datasets - Không push file JSON nào
 # ========================
-camera_catalog/camera_catalog_imagehandler.json
+camera_catalog/*.json
 camera_catalog_chunks/*.json
-!camera_catalog_chunks/index.json
 
 # ========================
 # Database và SQL

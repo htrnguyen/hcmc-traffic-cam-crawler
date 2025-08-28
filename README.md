@@ -14,13 +14,15 @@ Hệ thống thu thập hình ảnh từ camera giao thông công cộng, lưu t
 ```
 ├── hcmc_manycam_capture_save_images.py    # Script chính
 ├── requirements.txt                        # Dependencies Python
-├── camera_catalog/                        # Dữ liệu camera
-├── camera_catalog_chunks/                 # Phân chia camera thành chunks
+├── camera_catalog/                        # Dữ liệu camera (tự generate)
+├── camera_catalog_chunks/                 # Phân chia camera thành chunks (tự generate)
 ├── scripts/                               # Tools tiền xử lý
 ├── rclone-v1.71.0-windows-amd64/         # Binary rclone
-├── staging_images/
-└── logs/
+├── staging_images/                        # Lưu trữ tạm 
+└── logs/                                  # Log files
 ```
+
+**Lưu ý**: Các thư mục `camera_catalog/` và `camera_catalog_chunks/` sẽ được tạo tự động khi chạy preprocessing scripts.
 
 ## Cài đặt
 
@@ -74,19 +76,21 @@ OUT_ROOT=staging_images
 
 ## Sử dụng
 
-### Chạy crawler
+### Bước 1: Preprocessing (BẮT BUỘC khi lần đầu sử dụng)
 
-```bash
-python hcmc_manycam_capture_save_images.py --chunk-file camera_catalog_chunks/cams_chunk_000.json
-```
-
-### Preprocessing (nếu cần cập nhật data)
+Tạo dữ liệu camera catalog và chunks:
 
 ```bash
 cd scripts
 python parse_folder_ajax_response_full.py
 python filter_imagehandler_clean.py
 python build_chunks_from_clean.py
+```
+
+### Bước 2: Chạy crawler
+
+```bash
+python hcmc_manycam_capture_save_images.py --chunk-file camera_catalog_chunks/cams_chunk_000.json
 ```
 
 ### Chạy multiple chunks (tùy chọn)
