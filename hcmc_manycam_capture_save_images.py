@@ -21,6 +21,15 @@ import platform
 import httpx
 from PIL import Image
 
+# ================= .env (tùy chọn) =================
+# Nếu cài python-dotenv, file .env sẽ được nạp; nếu không có cũng không sao.
+try:
+    from dotenv import load_dotenv 
+
+    load_dotenv()
+except Exception:
+    pass
+
 # ================= Helpers ENV =================
 def env_int(name: str, default: int) -> int:
     v = os.environ.get(name, "")
@@ -75,7 +84,7 @@ NA_SHA256 = "1ef51d905a2e9d42678f4a37d5d54ecf9407dfd683ef39607782ddd64ab1aed5"
 NA_AHASH_8x8 = "ffe3cbc3c3e781ff"
 
 # JPEG output
-JPEG_QUALITY = 85
+JPEG_QUALITY = 95
 JPEG_OPTIMIZE = True
 JPEG_PROGRESSIVE = True
 
