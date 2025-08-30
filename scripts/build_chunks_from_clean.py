@@ -8,7 +8,7 @@ from collections import defaultdict
 # ====== CẤU HÌNH ======
 INPUT_PATH = Path("../camera_catalog/camera_catalog_imagehandler_clean.json")
 OUTPUT_DIR = Path("../camera_catalog_chunks")
-CHUNK_SIZE = 600
+CHUNK_SIZE = 100
 STRATEGY = "district_interleave"  
 SEED = "stable-seed-2025-08-25" 
 
