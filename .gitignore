@@ -20,6 +20,8 @@ logs/
 *.log
 tmp/
 temp/
+out/
+output/
 
 # ========================
 # Project datasets - Không push file JSON nào
@@ -41,6 +43,36 @@ sqlite_dataset/
 rclone-v1.71.0-windows-amd64/
 .rclone/
 rclone-cache/
+
+# ========================
+# Notebook
+# ========================
+.ipynb_checkpoints
+*.ipynb
+
+# =======================
+# config, yaml, json
+# ========================
+config.yaml
+config.yml
+config.json
+settings.yaml
+settings.yml
+settings.json
+
+# =======================
+# txt files
+# ========================
+*.txt
+*.csv
+*.tsv
+*.log
+*.out
+*.bak
+*.backup
+*.old
+*.orig
+*.test
 
 # ========================
 # Python
