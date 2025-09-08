@@ -51,14 +51,9 @@ rclone-cache/
 *.ipynb
 
 # =======================
-# config, yaml, json
-# ========================
-config.yaml
-config.yml
-config.json
-settings.yaml
-settings.yml
-settings.json
+# Loại bỏ tất cả file .json ở mọi vị trí
+# ========================  
+*.json
 
 # =======================
 # txt files

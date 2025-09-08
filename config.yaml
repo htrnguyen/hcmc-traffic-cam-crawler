@@ -1,0 +1,32 @@
+# Endpoint
+endpoint_template: 'https://giaothong.hochiminhcity.gov.vn/render/ImageHandler.ashx?id={cam_id}&t={epoch_ms}'
+
+# Files
+camera_ids_file: 'camera_ids.csv'    
+blacklist_file: 'blacklist.txt'
+
+# Local dirs
+data_dir: 'data'
+archive_dir: 'archives'
+
+# Google Drive OAuth
+drive_folder_id: '1SepdKD0J8ELgXgBaxqo8XsPW2bLgv4jo'
+oauth_client_secret: 'credentials.json'
+oauth_token_file: 'token.json'
+
+# Timing
+crawl_interval_minutes: 5    # Crawl every 5 minutes (can change to 10, 15, etc.)
+
+# Processing
+batch_size: 50               # Process 50 cameras per batch
+batch_delay: 3               # 3 seconds delay between batches
+
+# HTTP
+http_timeout: 8
+http_retries: 1
+concurrency_limit: 50        # Max 50 concurrent connections
+
+# Error image detection - blacklist cameras with error images
+na_size: [284, 177]
+na_sha256: '1ef51d905a2e9d42678f4a37d5d54ecf9407dfd683ef39607782ddd64ab1aed5'
+na_ahash_8x8: 'ffe3cbc3c3e781ff'
